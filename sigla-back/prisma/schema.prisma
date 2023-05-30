@@ -11,9 +11,36 @@ datasource db {
 }
 
 model User {
-  id                 String  @id @default(uuid())
+  id                 String    @id @default(uuid())
   name               String
-  email              String  @unique
+  email              String    @unique
   password           String
   resetPasswordToken String?
+  isAdmin            Boolean
+  Product            Product[]
+  Report             Report[]
+}
+
+model Report {
+  id          String    @id @default(uuid())
+  date        DateTime
+  description String
+  products    Product[]
+  senderUser  User      @relation(fields: [userId], references: [id])
+  userId      String
+}
+
+model Product {
+  id              String   @id @default(uuid())
+  name            String
+  description     String
+  brand           String
+  releaseDate     DateTime
+  isNational      Boolean
+  extra           String
+  validated       Boolean
+  registeringUser User     @relation(fields: [userId], references: [id])
+  userId          String
+  Report          Report?  @relation(fields: [reportId], references: [id])
+  reportId        String?
 }
