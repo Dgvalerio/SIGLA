@@ -1,0 +1,35 @@
+# compiled output
+sigla-back/dist
+sigla-back/node_modules
+
+# Logs
+sigla-back/logs
+sigla-back/*.log
+sigla-back/npm-debug.log*
+sigla-back/pnpm-debug.log*
+sigla-back/yarn-debug.log*
+sigla-back/yarn-error.log*
+sigla-back/lerna-debug.log*
+
+# OS
+sigla-back/.DS_Store
+
+# Tests
+sigla-back/coverage
+sigla-back/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
