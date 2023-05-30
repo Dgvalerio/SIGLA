@@ -1,3 +1,6 @@
+# env
+sigla-back/.env
+
 # compiled output
 sigla-back/dist
 sigla-back/node_modules
